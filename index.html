@@ -2,29 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Manager</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>shopping cart manager</h1>
-<div>
-<input type="text" placeholder="enter the product code " id="product-code"><br><br>
-<input type="text" placeholder="enter the product name" id="product-name"><br><br>
-<input type="text" placeholder="enter the product price" id="product-price"><br><br>
-<input type="text" placeholder="enter the product quantity" id="product-quantity"><br><br>
-<button id="btn-atc">Add to Cart</button>
 
+<h1>Shopping Cart Manager</h1>
 
+<div id="form">
+    <input type="text" id="product-code" placeholder="Enter Product Code"><br><br>
+    <input type="text" id="product-name" placeholder="Enter Product Name"><br><br>
+    <input type="text" id="product-price" placeholder="Enter Product Price"><br><br>
+    <input type="text" id="product-quantity" placeholder="Enter Product Quantity"><br><br>
+    <button id="btn-atc">Add To Cart</button>
+    <button id="bill">Generate Bill</button>
+</div>
+
+<br><br>
+
+<div class="container">
+
+    <table id="table"></table>
+    <div id="bill-generator">
+        <h2>Bill Generator</h2>
+      
+        <p><b>Bill Number :</b> <span id="bill-no">-</span></p>
+        <p><b>Date :</b> <span id="bill-date">-</span></p>
+      
+        <p><b>Subtotal :</b> ₹<span id="subtotal">0</span></p>
+        <p><b>GST (18%) :</b> ₹<span id="gst">0</span></p>
+
+        <h3>Total : ₹<span id="final-total">0</span></h3>
+
+    </div>
 
 </div>
-<div>
-    
-    <table id="table" >
-        
-    
-    </table>
-</div>
-    <script src="index.js"></script>
+
+<script src="index.js"></script>
+
 </body>
 </html>
